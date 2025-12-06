@@ -1,159 +1,224 @@
-# SIKEY – Sovereign Identity Key
+# SIKEY — Sovereign Identity Key Protocol  
+### *Identity Without Exposure.*
 
-**SIKEY** (Sovereign Identity Key) is an open-source, community-driven project to create a **self-owned, censorship-resistant digital identity** layer that does **not** depend on governments or Big Tech.
+SIKEY is an open-source, decentralised, zero-knowledge identity protocol designed to give **humans — not institutions — ownership over their identity** in the digital age.
 
-> Digital ID without surveillance. Identity without permission.  
-> For humans, not systems.
+Modern digital identity systems are being built around centralised databases, biometrics, surveillance metadata, and permanent identifiers tied to every interaction.  
+SIKEY provides the opposite:
 
----
-
-## 🔹 What is SIKEY?
-
-SIKEY is a protocol + reference implementation for:
-
-- **Self-sovereign identity** – you control your keys, credentials, and revocation.
-- **Privacy-preserving verification** – prove *facts* about yourself (age, licence, access, etc.) without exposing all your data, using **zero-knowledge proofs** and modern cryptography.
-- **Interoperable identity** – portable across apps, platforms, and chains (where it makes sense), instead of being locked to a single government or platform.
-- **Open, forkable, and community-governed** – anyone can inspect, contribute, fork, or build on top.
-
-Right now, this repo is:
-
-- A living **manifesto**,  
-- An evolving **whitepaper & protocol spec**,  
-- The home for **reference implementations** as they emerge.
+> **Self-sovereign identity, non-correlatable keys, selective disclosure, and zero-knowledge verification — all without exposing who you are.**
 
 ---
 
-## ⚡ Why SIKEY exists
+# 🚀 Mission
 
-Most “digital ID” systems today are:
+To build a **public, decentralised, censorship-resistant identity layer**  
+that allows individuals to:
 
-- **Centralised** – controlled by governments or corporations.
-- **Surveillance-friendly** – built on data collection and tracking.
-- **Non-portable** – tied to one jurisdiction, one app, or one company.
-- **Fragile** – a single hack or breach can expose millions of identities.
+- Prove information **without revealing personal data**  
+- Authenticate **without being tracked**  
+- Hold credentials **without registries or surveillance**  
+- Access services **without dependency on governments or corporations**  
 
-We believe:
-
-1. **Identity should be self-sovereign**, not state-sovereign.  
-2. **Privacy is the default**, not an add-on.  
-3. **Open protocols > walled gardens.**  
-4. **No single entity** (including us) should control the identity layer of the internet.
-
-SIKEY is an attempt to create:
-
-> *“The Bitcoin of digital identity”* – neutral, open, and not owned by anyone.
+**SIKEY is identity re-imagined — for freedom, privacy, and digital sovereignty.**
 
 ---
 
-## 🧱 High-Level Architecture (v0 concept)
+# 🔐 Core Principles
 
-> This will evolve – see `/docs/architecture-overview.md` for updates.
+### **1. Self-Sovereignty**
+Identity must be generated, held, and controlled by the individual.
 
-Core components:
+### **2. Zero-Knowledge by Default**
+Verification without exposure.  
+Access without surveillance.
 
-- **Sovereign Identity Keys (SIKs)**  
-  - Your root **Sovereign Identity Key** pair.  
-  - Used to derive per-context keys (per app / per verifier) to avoid correlation.
+### **3. Selective Disclosure**
+Only the required attribute is ever revealed — nothing more.
 
-- **Decentralised Identifiers (DIDs)**  
-  - SIKEY uses DIDs (or a DID-like model) for interoperable identifiers.
-  - Support for different DID methods (on-chain and off-chain) is planned.
+### **4. Non-Correlation Across Contexts**
+Every app, verifier, and session gets a unique, untrackable identity key.
 
-- **Verifiable Credentials & Attestations**  
-  - Issuers (institutions *or* community verifiers) sign credentials.  
-  - Users hold these locally in their wallet or secure storage.
+### **5. Decentralised Trust Anchors**
+No central authority. No global registry. No identity database.
 
-- **Zero-Knowledge Proof Layer**  
-  - Prove “I am over 18”, “I own this licence”, “I passed KYC”, etc.,
-    without revealing the raw credential or sensitive data.
-
-- **Governance & Token (SIK) – TBD**  
-  - Potential token to coordinate incentives, not to gate access.  
-  - Governance model designed to avoid capture by states or large actors.
+### **6. Open-Source Transparency**
+A protocol governed by its community, not institutions.
 
 ---
 
-## 🗺️ Project Status
+# 🧩 How SIKEY Works
 
-Very early-stage and intentionally open.
+SIKEY is built around a single foundational concept:
 
-- ✅ Manifesto stub – [`/docs/manifesto.md`](docs/manifesto.md)  
-- ✅ Whitepaper stub – [`/docs/whitepaper.md`](docs/whitepaper.md)  
-- 🧪 Design & research – threat models, architecture, and cryptographic choices  
-- ⏳ Reference implementation – to be discussed and built *with* the community
+## **Sovereign Identity Key (SIK)**  
+A root cryptographic key from which all identity interactions are derived:
 
-If you care about **sovereignty, privacy, cryptography, Web3, or open governance**, you’re in the right place.
+- Device keys  
+- App-specific keys  
+- Verifier-specific keys  
+- Session keys  
+- Zero-knowledge proof identities  
 
----
-
-## 🤝 How to Get Involved
-
-We’re especially looking for:
-
-- Cryptographers & security engineers  
-- Protocol / backend devs (Rust, Go, TypeScript, etc.)  
-- Identity / SSI / DID experts  
-- Product & UX designers who care about privacy  
-- Legal / policy minds who understand digital ID risks  
-- Builders who give a damn about freedom
-
-### 1. Join the discussion
-
-1. ⭐ Star this repo to follow progress.  
-2. Check the [Issues](../../issues) for:
-   - `discussion` – ideas, questions, design threads  
-   - `good first issue` – things new contributors can pick up  
-3. Open a new issue if:
-   - You want to propose a change (use RFC format if it’s big).  
-   - You want to start a design discussion.
-
-### 2. Contribute
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for:
-
-- How we work  
-- Branch / PR model  
-- How to propose protocol changes  
+Each derived key is isolated and **cannot be linked** to any other.
 
 ---
 
-## 🛡️ Security
+# 🧱 Architecture Overview
 
-This project touches **identity, cryptography, and privacy**.  
-Please *do not* disclose potential vulnerabilities in public issues.
+SIKEY is composed of four layers:
 
-Instead, see [`SECURITY.md`](SECURITY.md) for how to report security issues responsibly.
+### **1. User Layer — SIKEY Wallet**
+- Generates the Sovereign Identity Key  
+- Stores credentials locally  
+- Creates zero-knowledge proofs  
+
+### **2. Issuer Layer**
+- Governments  
+- Universities  
+- Banks  
+- Private orgs  
+- Web3 protocols  
+
+Issuers issue → users hold → issuers forget.
+
+### **3. Verifier Layer**
+Services validate proofs without ever seeing identity.
+
+### **4. Decentralised Trust Registry**
+Stores:
+- issuer public keys  
+- credential schemas  
+- revocation commitments  
+
+Stores *nothing* about users.
 
 ---
 
-## 🧭 Roadmap
+# 📚 Key Documents
 
-High-level:
+### **📝 Whitepaper v1.1**  
+A complete overview of the SIKEY protocol, architecture, and design philosophy.  
+**[Download PDF](./docs/whitepaper.md)**  
+*(GitHub Releases also include a designed PDF version.)*
 
-1. Document the vision clearly (manifesto + whitepaper v1).  
-2. Agree the threat model & core principles.  
-3. Design the minimal viable protocol for SIKEY v1.  
-4. Build a reference implementation + example apps.  
-5. Distribute governance and avoid capture.
+### **📜 Manifesto v1.1**  
+The philosophical foundation of the SIKEY movement — identity as a human right.  
+**[Read Manifesto](./docs/manifesto.md)**  
+*(Designed PDF also available in Releases.)*
 
-More detail: [`ROADMAP.md`](ROADMAP.md).
+### **📘 Specifications**  
+SIKEY uses a structured specification process similar to EIPs / ZIPs.
+
+| Spec | Title | Status |
+|------|--------|---------|
+| **0001** | Vision & Principles | Final |
+| **0002** | Identity Model & Key Derivation | Draft |
+| **0003** | Credentials & Attestations | (Coming next) |
+
+All specs live in `/specs/`.
 
 ---
 
-## 📜 License
+# 🔧 Development Status
 
-SIKEY is open-source under the **Apache 2.0 License** – see [`LICENSE`](LICENSE).
+SIKEY is at the **foundational development stage**, focused on:
 
-You are free to use, modify, fork, and build on this project, subject to the terms of the license.
+- Publishing core specifications  
+- Establishing documentation  
+- Building the open-source community  
+- Designing early prototypes  
+- Engaging researchers, cryptographers & engineers  
+
+Contributors are welcome at all levels.
 
 ---
 
-## 🙏 A Note from the Initiator
+# 🤝 Contributing
 
-> “I started SIKEY because I don’t want my identity – or my kids’ identity – to be owned by governments, banks, or Big Tech.  
-> I don’t have all the answers and I can’t build this alone.  
-> If this vision resonates with you, help shape it. Fork it. Challenge it. Improve it.  
-> Let’s build an identity layer that belongs to people — not to systems.”
+SIKEY is community-driven.  
+Anyone aligned with the mission of digital sovereignty is invited to participate.
 
-— Kevin (initiator of SIKEY)
+Ways to contribute:
+
+- Review specifications  
+- Propose new SKIPs (SIKEY Improvement Proposals)  
+- Participate in discussions  
+- Submit PRs  
+- Help with cryptography, ZK circuits, wallets, UX, documentation  
+
+Read the **Contributing Guide**:  
+`/CONTRIBUTING.md`
+
+---
+
+# 🛡 Security
+
+This is an identity protocol — security matters deeply.
+
+See:  
+`/SECURITY.md`
+
+If you discover a vulnerability, follow the responsible disclosure process.
+
+---
+
+# 🌐 License
+
+SIKEY is licensed under the **Apache 2.0 License**, ensuring:
+
+- Open use  
+- Open modification  
+- No proprietary lock-in  
+- No centralised ownership  
+
+---
+
+# 💬 Community
+
+A GitHub Discussion will be opened for:
+
+### **“Welcome to SIKEY — Introduce Yourself & What You Want to Build”**
+
+This will become the entry point for contributors.
+
+More channels (Discord, Matrix, Forum) will follow once the early community forms.
+
+---
+
+# 🌍 Why SIKEY Matters
+
+Centralised digital identity is becoming the backbone of global governance.  
+And it is being built in ways that:
+
+- track humans  
+- profile behaviour  
+- link data across systems  
+- allow conditional access  
+- concentrate power  
+
+SIKEY exists to provide the opposite —  
+**a decentralised, private, trustless identity layer that protects humanity from identity capture.**
+
+> ***Identity must belong to people — not institutions.***
+
+---
+
+# 🔥 Join the Movement
+
+If you believe in:
+
+- autonomy  
+- freedom  
+- privacy  
+- digital sovereignty  
+- decentralisation  
+- zero-knowledge identity  
+
+…then you are already aligned with SIKEY.
+
+This is your invitation to build.
+
+---
+
+# **SIKEY — Identity Without Exposure.**
