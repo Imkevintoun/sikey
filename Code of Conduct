@@ -1,0 +1,28 @@
+
+4. Commit message: `docs: add contributing guide` → **Commit changes**
+
+---
+
+### B. `CODE_OF_CONDUCT.md`
+
+1. **Add file → Create new file**
+2. File name: `CODE_OF_CONDUCT.md`
+3. Paste:
+
+```markdown
+# Code of Conduct
+
+SIKEY is a project about **freedom, sovereignty, and respect**. To keep this space constructive:
+
+- Be respectful. No harassment, abuse, bigotry, or personal attacks.
+- Critique ideas, not people.
+- Assume good intent, but don’t ignore harmful behaviour.
+- No doxxing or sharing of private information.
+- No advocating for surveillance, hate, or violence.
+
+If you see behaviour that violates this:
+
+- Email: `sikey-project@proton.me` (replace with your real contact when ready), or  
+- Open a private issue with the maintainers.
+
+Maintainers may warn, block, or remove contributions from people who don’t respect this.
