@@ -107,6 +107,13 @@ The philosophical foundation of the SIKEY movement — identity as a human right
 **[Read Manifesto](./docs/manifesto.md)**  
 *(Designed PDF also available in Releases.)*
 
+### **💠 Future Economic Layer (Exploratory)**  
+An outline of why SIKEY may introduce a native utility token (SIK Coin) in the future —  
+focused on contributor incentives, decentralised governance, and protocol sustainability.  
+
+**[Read SIK Coin Document](./docs/SIK-Coin.md)**  
+*(Conceptual only. No live token. No launch planned.)*
+
 ### **📘 Specifications**  
 SIKEY uses a structured specification process similar to EIPs / ZIPs.
 
